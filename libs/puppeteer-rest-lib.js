@@ -1,5 +1,5 @@
 var rest = require("restler-bluebird");
-var config = require("Config");
+var config = require("config");
 
 class PuppeteerRestLib {
 	constructor(opts) {
