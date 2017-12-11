@@ -1,5 +1,39 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	.row
+		.col-sm-12
+			h4 Top news by salience
+			- var n = 0;
+			while n < 10
+				span.label.label-primary= entityListSalience[n].name
+				| 
+				- n++
+			h4 Top news by incidence
+			- var n = 0;
+			while n < 10
+				span.label.label-success= entityListCount[n].name
+				| 
+				- n++
+	.row
+		each site, index in sites
+			.col-sm-3
+				h3
+					a(href=site.site.url)= site.site.name
+				p
+					i Updated 
+						=site.site.fromNow
+				hr
+				each article in site.articles
+					a(href=article.href, target="_blank")
+						h4= article.headline
+					if (article.entities)
+						strong
+							each entity in article.entities
+								span.label.label-primary= entity.name
+								| 
+					p= article.blurb
+					hr
+			if((index + 1) % 4 == 0)
+				</div><div class="row">
+

@@ -1,0 +1,106 @@
+{
+	"name": "CNN",
+	"url": "https://edition.cnn.com/",
+	"reload": "600",
+	"selectors": [
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#intl_homepage1-zone-1 > div.l-container > div > div.column.zn__column--idx-2 > ul > article.cd.cd--card.cd--article.cd--idx-0.cd--large.cd--vertical.cd--has-siblings.cd--has-media.cd--media__image > div > div.cd__content > h3 > a"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#intl_homepage1-zone-1 > div.l-container > div > div.column.zn__column--idx-2 > ul > article.cd.cd--card.cd--article.cd--idx-0.cd--large.cd--vertical.cd--has-siblings.cd--has-media.cd--media__image > div > div.cd__content > h3 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#intl_homepage1-zone-1 > div.l-container > div > div.column.zn__column--idx-2 > ul > article.cd.cd--card.cd--article.cd--idx-1.cd--extra-small.cd--has-siblings.cd--media__image > div > div > h3 > a"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#intl_homepage1-zone-1 > div.l-container > div > div.column.zn__column--idx-2 > ul > article.cd.cd--card.cd--article.cd--idx-1.cd--extra-small.cd--has-siblings.cd--media__image > div > div > h3 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#intl_homepage1-zone-1 > div.l-container > div > div.column.zn__column--idx-2 > ul > article.cd.cd--card.cd--article.cd--idx-2.cd--extra-small.cd--has-siblings.cd--media__image > div > div > h3 > a"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#intl_homepage1-zone-1 > div.l-container > div > div.column.zn__column--idx-2 > ul > article.cd.cd--card.cd--article.cd--idx-2.cd--extra-small.cd--has-siblings.cd--media__image > div > div > h3 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#intl_homepage1-zone-1 > div.l-container > div > div.column.zn__column--idx-2 > ul > article.cd.cd--card.cd--article.cd--idx-3.cd--extra-small.cd--has-siblings.cd--media__image > div > div > h3 > a"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#intl_homepage1-zone-1 > div.l-container > div > div.column.zn__column--idx-2 > ul > article.cd.cd--card.cd--article.cd--idx-3.cd--extra-small.cd--has-siblings.cd--media__image > div > div > h3 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#intl_homepage1-zone-1 > div.l-container > div > div.column.zn__column--idx-2 > ul > article.cd.cd--card.cd--article.cd--idx-4.cd--extra-small.cd--has-siblings.cd--media__image > div > div > h3 > a"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#intl_homepage1-zone-1 > div.l-container > div > div.column.zn__column--idx-2 > ul > article.cd.cd--card.cd--article.cd--idx-4.cd--extra-small.cd--has-siblings.cd--media__image > div > div > h3 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#intl_homepage1-zone-1 > div.l-container > div > div.column.zn__column--idx-2 > ul > article.cd.cd--card.cd--article.cd--idx-5.cd--extra-small.cd--has-siblings.cd--media__image > div > div > h3 > a"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#intl_homepage1-zone-1 > div.l-container > div > div.column.zn__column--idx-2 > ul > article.cd.cd--card.cd--article.cd--idx-5.cd--extra-small.cd--has-siblings.cd--media__image > div > div > h3 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#intl_homepage1-zone-1 > div.l-container > div > div.column.zn__column--idx-2 > ul > article.cd.cd--card.cd--article.cd--idx-6.cd--extra-small.cd--has-siblings.cd--media__image > div > div > h3 > a"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#intl_homepage1-zone-1 > div.l-container > div > div.column.zn__column--idx-2 > ul > article.cd.cd--card.cd--article.cd--idx-6.cd--extra-small.cd--has-siblings.cd--media__image > div > div > h3 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#intl_homepage1-zone-1 > div.l-container > div > div.column.zn__column--idx-2 > ul > article.cd.cd--card.cd--article.cd--idx-7.cd--extra-small.cd--has-siblings.cd--media__image > div > div > h3 > a"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#intl_homepage1-zone-1 > div.l-container > div > div.column.zn__column--idx-2 > ul > article.cd.cd--card.cd--article.cd--idx-7.cd--extra-small.cd--has-siblings.cd--media__image > div > div > h3 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#intl_homepage1-zone-1 > div.l-container > div > div.column.zn__column--idx-2 > ul > article.cd.cd--card.cd--article.cd--idx-8.cd--extra-small.cd--has-siblings.cd--media__image > div > div > h3 > a"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#intl_homepage1-zone-1 > div.l-container > div > div.column.zn__column--idx-2 > ul > article.cd.cd--card.cd--article.cd--idx-8.cd--extra-small.cd--has-siblings.cd--media__image > div > div > h3 > a",
+				"attr": "href"
+			}
+		}
+	]
+}

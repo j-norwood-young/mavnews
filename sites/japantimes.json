@@ -1,0 +1,82 @@
+{
+	"name": "The Japan Times",
+	"url": "https://www.japantimes.co.jp/",
+	"reload": "600",
+	"selectors": [
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#wrapper > section:nth-child(2) > div.main_content > div.module > div:nth-child(1) > div > article:nth-child(2) > header > hgroup > h1 > a"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#wrapper > section:nth-child(2) > div.main_content > div.module > div:nth-child(1) > div > article:nth-child(2) > p"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#wrapper > section:nth-child(2) > div.main_content > div.module > div:nth-child(1) > div > article:nth-child(2) > header > hgroup > h1 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#wrapper > section:nth-child(2) > div.main_content > div.module > div:nth-child(1) > div > article:nth-child(3) > header > hgroup > h1 > a"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#wrapper > section:nth-child(2) > div.main_content > div.module > div:nth-child(1) > div > article:nth-child(3) > p"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#wrapper > section:nth-child(2) > div.main_content > div.module > div:nth-child(1) > div > article:nth-child(3) > header > hgroup > h1 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#wrapper > section:nth-child(2) > div.main_content > div.module > div:nth-child(1) > div > article:nth-child(4) > header > hgroup > h1 > a"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#wrapper > section:nth-child(2) > div.main_content > div.module > div:nth-child(1) > div > article:nth-child(4) > p"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#wrapper > section:nth-child(2) > div.main_content > div.module > div:nth-child(1) > div > article:nth-child(4) > header > hgroup > h1 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#wrapper > section:nth-child(2) > div.main_content > div.module > div:nth-child(1) > div > article:nth-child(5) > header > hgroup > h1 > a"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#wrapper > section:nth-child(2) > div.main_content > div.module > div:nth-child(1) > div > article:nth-child(5) > p"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#wrapper > section:nth-child(2) > div.main_content > div.module > div:nth-child(1) > div > article:nth-child(5) > header > hgroup > h1 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#wrapper > section:nth-child(2) > div.main_content > div.module > div.column_large > div.flexslider-container > div > div > ul > li.flex-active-slide > article > div.padding_block > div > header > hgroup > h1 > a"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#wrapper > section:nth-child(2) > div.main_content > div.module > div.column_large > div.flexslider-container > div > div > ul > li.flex-active-slide > article > div.padding_block > div > div > p"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#wrapper > section:nth-child(2) > div.main_content > div.module > div.column_large > div.flexslider-container > div > div > ul > li.flex-active-slide > article > div.padding_block > div > header > hgroup > h1 > a",
+				"attr": "href"
+			}
+		}
+	]
+}

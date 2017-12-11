@@ -1,0 +1,8 @@
+{
+	"puppeteerRest": {
+		"url": "http://localhost:4200"
+	},
+	"google": {
+		"apiKey": "your-api-key"
+	}
+}

@@ -1,0 +1,82 @@
+{
+	"name": "New York Times",
+	"url": "https://www.nytimes.com/",
+	"reload": "600",
+	"selectors": [
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#top-news > div > div > div > div > article:first > h2 > a"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#top-news > div > div > div > div > article:first > ul"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#top-news > div > div > div > div > article:first > h2 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#top-news > div.wide-b-layout.layout > div.a-column.column > div > div:nth-child(3) > article > h2 > a"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#top-news > div.wide-b-layout.layout > div.a-column.column > div > div:nth-child(3) > article > .summary"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#top-news > div.wide-b-layout.layout > div.a-column.column > div > div:nth-child(3) > article > h2 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#top-news > div.wide-b-layout.layout > div.a-column.column > div > div:nth-child(5) > article > h2 > a"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#top-news > div.wide-b-layout.layout > div.a-column.column > div > div:nth-child(5) > article > .summary"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#top-news > div.wide-b-layout.layout > div.a-column.column > div > div:nth-child(5) > article > h2 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#top-news > div.wide-b-layout.layout > div.a-column.column > div > div:nth-child(7) > article > h2 > a"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#top-news > div.wide-b-layout.layout > div.a-column.column > div > div:nth-child(7) > article > .summary"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#top-news > div.wide-b-layout.layout > div.a-column.column > div > div:nth-child(7) > article > h2 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#top-news > div.wide-b-layout.layout > div.a-column.column > div > div:nth-child(9) > article > h2 > a"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#top-news > div.wide-b-layout.layout > div.a-column.column > div > div:nth-child(9) > article > .summary"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#top-news > div.wide-b-layout.layout > div.a-column.column > div > div:nth-child(9) > article > h2 > a",
+				"attr": "href"
+			}
+		}
+	]
+}

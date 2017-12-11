@@ -1,0 +1,97 @@
+{
+	"name": "Daily Maverick",
+	"url": "https://www.dailymaverick.co.za/",
+	"reload": "600",
+	"selectors": [ 
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": ".firstarticle:first > h1 > a"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": ".firstarticle:first > .blurb"
+			},
+			"href": {
+				"type": "attr",
+				"selector": ".firstarticle:first > h1 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#home > div.column1 > div:nth-child(5) > h1"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#home > div.column1 > div:nth-child(5) > div.blurb"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#home > div.column1 > div.article.firstarticle > h1 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#home > div.column1 > div:nth-child(6) > h1"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#home > div.column1 > div:nth-child(6) > div.blurb"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#home > div.column1 > div:nth-child(6) > h1 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#home > div.column1 > div:nth-child(7) > h1"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#home > div.column1 > div:nth-child(7) > div.blurb"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#home > div.column1 > div:nth-child(7) > h1 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#home > div.column1 > div:nth-child(10) > h1 > a"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#home > div.column1 > div:nth-child(10) > div.blurb"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#home > div.column1 > div:nth-child(10) > h1 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#home > div.column1 > div:nth-child(11) > h1"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#home > div.column1 > div:nth-child(11) > div.blurb"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#home > div.column1 > div:nth-child(11) > h1 > a",
+				"attr": "href"
+			}
+		}
+	]
+}

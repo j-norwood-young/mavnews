@@ -1,0 +1,82 @@
+{
+	"name": "eNCA",
+	"url": "http://www.enca.com/",
+	"reload": "120",
+	"selectors": [
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#noodle > ul.hero-slot.viewport > div > li.\\31 > article > a > h2"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#noodle > ul.hero-slot.viewport > div > li.\\31 > article > a > p"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#noodle > ul.hero-slot.viewport > div > li.\\31 > article > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#noodle > ul.hero-slot.viewport > div > li.\\32 > article > a > h2"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#noodle > ul.hero-slot.viewport > div > li.\\32 > article > a > p"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#noodle > ul.hero-slot.viewport > div > li.\\32 > article > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#noodle > ul.hero-slot.viewport > div > li.\\33 > article > a > h2"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#noodle > ul.hero-slot.viewport > div > li.\\33 > article > a > p"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#noodle > ul.hero-slot.viewport > div > li.\\33 > article > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#wrapper > div.page-body > div.body-wrapper > section.horizontal-article-bucket-wrapper > div > div.horizontal-article-col-left > a.horizontal-article-headline.article-headline-base"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#wrapper > div.page-body > div.body-wrapper > section.horizontal-article-bucket-wrapper > div > div.horizontal-article-col-left > p"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#wrapper > div.page-body > div.body-wrapper > section.horizontal-article-bucket-wrapper > div > div.horizontal-article-col-left > a.horizontal-article-headline.article-headline-base",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#horizontalArticleContentWrapper > div.horizontal-article-col-right > a.horizontal-article-headline.article-headline-base"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#horizontalArticleContentWrapper > div.horizontal-article-col-right > p"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#horizontalArticleContentWrapper > div.horizontal-article-col-right > a.horizontal-article-headline.article-headline-base",
+				"attr": "href"
+			}
+		}
+	]
+}

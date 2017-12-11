@@ -1,0 +1,73 @@
+{
+	"name": "EWN",
+	"url": "http://ewn.co.za/",
+	"reload": "120",
+	"selectors": [
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "body > div.main > div.wrapper.row.collapse > div > section.homepagefeatured > div > div > article > a > div.synopsis > h1"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "body > div.main > div.wrapper.row.collapse > div > section.homepagefeatured > div > div > article > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "body > div.main > div.wrapper.row.collapse > div > section.homepagefeatured > div > ul > li:nth-child(1) > a > article > h4"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "body > div.main > div.wrapper.row.collapse > div > section.homepagefeatured > div > ul > li:nth-child(1) > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "body > div.main > div.wrapper.row.collapse > div > section.homepagefeatured > div > ul > li:nth-child(2) > a > article > h4"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "body > div.main > div.wrapper.row.collapse > div > section.homepagefeatured > div > ul > li:nth-child(2) > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "body > div.main > div.wrapper.row.collapse > div > section.homepagefeatured > div > ul > li:nth-child(3) > a > article > h4"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "body > div.main > div.wrapper.row.collapse > div > section.homepagefeatured > div > ul > li:nth-child(3) > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "body > div.main > div.wrapper.row.collapse > div > section:nth-child(2) > div > div.medium-8.columns.content-wide > div > div > ul > li:nth-child(1) > article > h4 > a"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "body > div.main > div.wrapper.row.collapse > div > section:nth-child(2) > div > div.medium-8.columns.content-wide > div > div > ul > li:nth-child(1) > article > h4 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "body > div.main > div.wrapper.row.collapse > div > section:nth-child(2) > div > div.medium-8.columns.content-wide > div > div > ul > li:nth-child(2) > article > h4 > a"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "body > div.main > div.wrapper.row.collapse > div > section:nth-child(2) > div > div.medium-8.columns.content-wide > div > div > ul > li:nth-child(2) > article > h4 > a",
+				"attr": "href"
+			}
+		}
+	]
+}

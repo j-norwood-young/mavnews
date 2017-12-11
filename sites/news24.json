@@ -1,0 +1,82 @@
+{
+	"name": "News24",
+	"url": "https://www.news24.com/",
+	"reload": "60",
+	"selectors": [
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#pnlCachedHeadlines > div > div:nth-child(1) > div.news_item.first > h4 > a"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#pnlCachedHeadlines > div > div:nth-child(1) > div.news_item.first > p"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#pnlCachedHeadlines > div > div:nth-child(1) > div.news_item.first > h4 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#pnlCachedHeadlines > div > div:nth-child(1) > div:nth-child(2) > h4 > a"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#pnlCachedHeadlines > div > div:nth-child(1) > div:nth-child(2) > p"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#pnlCachedHeadlines > div > div:nth-child(1) > div:nth-child(2) > h4 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#pnlCachedHeadlines > div > div:nth-child(1) > div:nth-child(3) > h4 > a"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#pnlCachedHeadlines > div > div:nth-child(1) > div:nth-child(3) > p"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#pnlCachedHeadlines > div > div:nth-child(1) > div:nth-child(3) > h4 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#pnlCachedHeadlines > div > div:nth-child(1) > div:nth-child(4) > h4 > a"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#pnlCachedHeadlines > div > div:nth-child(1) > div:nth-child(4) > p"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#pnlCachedHeadlines > div > div:nth-child(1) > div:nth-child(4) > h4 > a",
+				"attr": "href"
+			}
+		},
+		{ 
+			"headline": {
+				"type": "text",
+				"selector": "#pnlCachedHeadlines > div > div:nth-child(2) > div.news_item.col300 > h4 > a"
+			},
+			"blurb": {
+				"type": "text",
+				"selector": "#pnlCachedHeadlines > div > div:nth-child(2) > div.news_item.col300 > p"
+			},
+			"href": {
+				"type": "attr",
+				"selector": "#pnlCachedHeadlines > div > div:nth-child(2) > div.news_item.col300 > h4 > a",
+				"attr": "href"
+			}
+		}
+	]
+}

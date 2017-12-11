@@ -6,10 +6,32 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var lessMiddleware = require('less-middleware');
 
+
 var index = require('./routes/index');
 var users = require('./routes/users');
 
+var session = require('express-session');
+var redis   = require("redis");
+var client  = redis.createClient();
+var redisStore = require('connect-redis')(session);
+
 var app = express();
+
+// Sessions
+var sess = {
+	secret: 'AKLJdnOK0kQvheYOOK2',
+	// cookie: {},
+  store: new redisStore({ host: 'localhost', port: 6379, client: client,ttl :  260}),
+  saveUninitialized: false,
+  resave: false
+}
+
+if (app.get('env') === 'production') {
+	app.set('trust proxy', 1) // trust first proxy
+	sess.cookie.secure = true // serve secure cookies,
+}
+
+app.use(session(sess))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,7 +47,6 @@ app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
