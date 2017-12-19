@@ -1,0 +1,6 @@
+- var d = moment(article.date).format("YYYY-MM-DD HH:mm")
+- var highlight = (article.keywords.indexOf("SAfrica") !== -1) || (article.headline.indexOf("ALERT") !== -1)
+	p= d
+	h5
+		a(href="/article/" + article._id, class=highlight ? "text-danger" : "")= article.headline
+	hr

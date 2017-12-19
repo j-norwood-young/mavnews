@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	.row
+		h3 AFP
+		each article, index in articles
+			.col-sm-2
+				include article-headline-stub
+			if((index + 1) % 6 == 0)
+				</div><div class="row">

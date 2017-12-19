@@ -16,6 +16,15 @@ block content
 				| 
 				- n++
 	.row
+		.col-sm-12
+			a(href="articles/500")
+				h3 AFP
+		each article, index in articles
+			.col-sm-2
+				include article-headline-stub
+			if((index + 1) % 6 == 0)
+				</div><div class="row">
+	.row
 		each site, index in sites
 			.col-sm-3
 				h3
