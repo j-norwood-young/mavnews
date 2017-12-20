@@ -5,37 +5,25 @@ var logger = require("morgan");
 var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
 var lessMiddleware = require("less-middleware");
+const config = require("config");
 
 var index = require("./routes/index");
 var users = require("./routes/users");
 
 var session = require("express-session");
-var redis = require("redis");
-var client = redis.createClient();
-var redisStore = require("connect-redis")(session);
+var MongoStore = require("connect-mongo")(session);
 
 var app = express();
 
-// Sessions
-var sess = {
-  secret: "AKLJdnOK0kQvheYOOK2",
-  // cookie: {},
-  store: new redisStore({
-    host: "localhost",
-    port: 6379,
-    client: client,
-    ttl: 260
+/* Sessions */
+app.use(
+  session({
+    secret: config.secret,
+    store: new MongoStore({
+      url: "mongodb://localhost/mavnews"
+    })
   })
-  // saveUninitialized: false,
-  // resave: false
-};
-
-// if (app.get('env') === 'production') {
-//  app.set('trust proxy', 1) // trust first proxy
-//  sess.cookie.secure = true // serve secure cookies,
-// }
-
-app.use(session(sess));
+);
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
