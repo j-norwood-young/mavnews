@@ -32,9 +32,7 @@ router.post("/login", auth.login, (req, res) => res.redirect("/"));
 router.get("/logout", auth.logout, (req, res, next) => res.redirect("/login"));
 
 var sites = (req, res, next) => {
-	console.log("Getting sites");
 	req.apihelper.get("site", { "sort[name]": 1 }).then(result => {
-		console.log(result);
 		sites = result.data;
 		var queue = sites.map(site => {
 			return cb =>
@@ -61,17 +59,6 @@ var sites = (req, res, next) => {
 		});
 	});
 };
-
-// function fixSites(req, res, next) {
-// 	var queue = [];
-// 	req.sites.forEach(site => {
-// 		site._id = null;
-// 		req.apihelper.post("site", site).catch(err => console.error(err));
-// 	});
-// 	res.send("Yo");
-// }
-
-// router.get("/fixSites", auth.restricted, sites, fixSites);
 
 var getSiteData = site => {
 	let queue = [];
@@ -222,12 +209,15 @@ router.get(
 	getNlp,
 	getArticles,
 	(req, res, next) => {
-		res.render("index", { title: "MavNews" });
+		res.render("index", { title: "MavNews", pg: "home" });
 	}
 );
 
 router.get("/article/:article_id", auth.restricted, (req, res, next) => {
 	req.apihelper.getOne("article", req.params.article_id).then(article => {
+		if (article.provider !== "AFP") {
+			article.body = article.body.replace(/\n/g, "<br>\n");
+		}
 		res.render("article", { article });
 	});
 });
@@ -237,7 +227,7 @@ router.get("/articles/:limit", auth.restricted, (req, res, next) => {
 		.get("article", { limit: req.params.limit, "sort[date]": -1 })
 		.then(result => {
 			articles = result.data;
-			res.render("articles", { articles });
+			res.render("articles", { articles, pg: "articles" });
 		});
 });
 
@@ -245,10 +235,33 @@ router.post("/", (req, res) => {
 	res.redirect("/");
 });
 
-router.get("/sites", sites, (req, res, next) => {
+router.get("/sites", auth.restricted, sites, (req, res, next) => {
 	res.send(req.sites);
 });
 
-router.get("/site/:site_id", (req, res, next) => {});
+router.get("/sites/trim", auth.restricted, sites, (req, res, next) => {
+	res.send(
+		req.sites.map(site => {
+			return { _id: site._id, name: site.name, url: site.url };
+		})
+	);
+});
+
+router.get("/site/:site_id", auth.restricted, sites, (req, res, next) => {
+	let site = sites.find(site => site._id === req.params.site_id);
+	getSiteData(site).then(articles => {
+		res.send({ site, articles });
+	});
+});
+
+router.get(
+	"/dynamic",
+	auth.restricted,
+	sites,
+	extractSites,
+	(req, res, next) => {
+		res.render("dynamic");
+	}
+);
 
 module.exports = router;
