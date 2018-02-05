@@ -1,0 +1,30 @@
+extends layout
+
+block content
+	.row
+		.col-sm-12
+			a(href="articles/500")
+				h3 AFP
+		#afp
+	.row
+		each site, index in sites
+			.col-sm-3(data-site_id=site.site._id)
+				h3
+					a(href=site.site.url)= site.site.name
+				p
+					i Updated 
+						span.fromNow
+				hr
+				.articles
+			if((index + 1) % 4 == 0)
+				</div><div class="row">
+
+	script#article_template(type="text/template")
+		| <a href="<%= article.href %>" target="_blank"><h4><%= article.headline %></h4></a>
+		| <p><%= article.blurb %></p>
+		| <hr />
+
+block scripts
+	script(src="/javascripts/jquery-3.2.1.min.js")
+	script(src="/javascripts/lodash.min.js")
+	script(src="/javascripts/mavnews.js")
