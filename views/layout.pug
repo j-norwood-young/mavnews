@@ -4,10 +4,8 @@ append styles
 	//- link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb", crossorigin="anonymous")
 block body
 	+navbar-fixed(siteName,"navbar","inverse")
-		//- +nav_item("#","active") Home
-		//- +nav_item("#") About
+		+nav_item("/", pg == "home" ? "active" : "") Home
+		+nav_item("/articles/500", pg == "articles" ? "active" : "") Wires
 		//- +nav_item("#") Contact
 	.container
 		block content
-	
-
