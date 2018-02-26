@@ -8,7 +8,6 @@ var lessMiddleware = require("less-middleware");
 const config = require("config");
 
 var index = require("./routes/index");
-var users = require("./routes/users");
 
 var session = require("express-session");
 var MongoStore = require("connect-mongo")(session);

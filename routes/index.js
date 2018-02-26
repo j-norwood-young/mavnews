@@ -8,6 +8,7 @@ const moment = require("moment");
 const config = require("config");
 const GoogleNLP = require("google-nlp");
 const nlp = new GoogleNLP(config.google.apiKey);
+const fs = require("fs");
 
 const puppeteer = new PuppeteerRestLib({
 	username: config.puppeteerRest.username,
@@ -39,6 +40,7 @@ var sites = (req, res, next) => {
 				puppeteer
 					.open(site.url, site.reload)
 					.then(result => {
+						console.log({ url: site.url, result });
 						site._id = result._id;
 						site.date_created = result.date_created;
 						site.date_updated = result.date_updated;
@@ -263,5 +265,23 @@ router.get(
 		res.render("dynamic");
 	}
 );
+
+router.get("/import_site/:site", auth.restricted, (req, res) => {
+	var disksite = require(`../sites/${ req.params.site }.json`);
+	req.apihelper.get("site")
+	.then(result => {
+		var dbsite = result.data.find(site => site.name === disksite.name);
+		if (!dbsite)
+			return req.apihelper.post("site", disksite);
+		return req.apihelper.put("site", dbsite._id, disksite);
+	})
+	.then(result => {
+		res.send(result);
+	})
+	.catch(err => {
+		console.trace(err);
+		res.send(500, err);
+	});
+});
 
 module.exports = router;

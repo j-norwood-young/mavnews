@@ -6,15 +6,15 @@
 		{ 
 			"headline": {
 				"type": "text",
-				"selector": ".firstarticle:first > h1 > a"
+				"selector": "#home > div.column1 > div.article.firstarticle > h1 > a"
 			},
 			"blurb": {
 				"type": "text",
-				"selector": ".firstarticle:first > .blurb"
+				"selector": "#home > div.column1 > div.article.firstarticle > div.blurb > a > p"
 			},
 			"href": {
 				"type": "attr",
-				"selector": ".firstarticle:first > h1 > a",
+				"selector": "#home > div.column1 > div.article.firstarticle > h1 > a",
 				"attr": "href"
 			}
 		},

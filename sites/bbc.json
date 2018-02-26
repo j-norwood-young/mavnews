@@ -6,15 +6,15 @@
 		{ 
 			"headline": {
 				"type": "text",
-				"selector": "#latest-stories-tab-container > div:nth-child(2) > div > div > div > div.gel-layout__item.nw-c-top-stories__primary-item.gel-2\\2f 3\\40 l.gel-9\\2f 16\\40 xxl.nw-o-no-keyline.nw-o-keyline\\40 s.nw-o-no-keyline\\40 m > div > div > div.gs-c-promo-body.gs-u-display-inline-block.gs-u-mt\\40 xs.gs-u-mt0\\40 m.gel-1\\2f 3\\40 m > div > a"
+				"selector": "#page > div > div > div > div > div.gel-layout__item.nw-c-top-stories__primary-item.gel-2\\2f 3\\40 l.gel-9\\2f 16\\40 xxl.nw-o-no-keyline.nw-o-keyline\\40 s.nw-o-no-keyline\\40 m > div > div > div.gs-c-promo-body.gs-u-display-inline-block.gs-u-mt\\40 xs.gs-u-mt0\\40 m.gel-1\\2f 3\\40 m > div > a"
 			},
 			"blurb": {
 				"type": "text",
-				"selector": "#latest-stories-tab-container > div:nth-child(2) > div > div > div > div.gel-layout__item.nw-c-top-stories__primary-item.gel-2\\2f 3\\40 l.gel-9\\2f 16\\40 xxl.nw-o-no-keyline.nw-o-keyline\\40 s.nw-o-no-keyline\\40 m > div > div > div.gs-c-promo-body.gs-u-display-inline-block.gs-u-mt\\40 xs.gs-u-mt0\\40 m.gel-1\\2f 3\\40 m > div > p"
+				"selector": "#page > div > div > div > div.gel-layout__item.nw-c-top-stories__primary-item.gel-2\\2f 3\\40 l.gel-9\\2f 16\\40 xxl.nw-o-no-keyline.nw-o-keyline\\40 s.nw-o-no-keyline\\40 m > div > div > div.gs-c-promo-body.gs-u-display-inline-block.gs-u-mt\\40 xs.gs-u-mt0\\40 m.gel-1\\2f 3\\40 m > div > p"
 			},
 			"href": {
 				"type": "attr",
-				"selector": "#latest-stories-tab-container > div:nth-child(2) > div > div > div > div.gel-layout__item.nw-c-top-stories__primary-item.gel-2\\2f 3\\40 l.gel-9\\2f 16\\40 xxl.nw-o-no-keyline.nw-o-keyline\\40 s.nw-o-no-keyline\\40 m > div > div > div.gs-c-promo-body.gs-u-display-inline-block.gs-u-mt\\40 xs.gs-u-mt0\\40 m.gel-1\\2f 3\\40 m > div > a",
+				"selector": "#page > div > div > div > div.gel-layout__item.nw-c-top-stories__primary-item.gel-2\\2f 3\\40 l.gel-9\\2f 16\\40 xxl.nw-o-no-keyline.nw-o-keyline\\40 s.nw-o-no-keyline\\40 m > div > div > div.gs-c-promo-body.gs-u-display-inline-block.gs-u-mt\\40 xs.gs-u-mt0\\40 m.gel-1\\2f 3\\40 m > div > a",
 				"attr": "href"
 			}
 		},
